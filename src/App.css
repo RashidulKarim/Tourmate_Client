@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.wrapper{
+  flex-grow: 1;
+}
+.brand-name{
+  color: #ff8800;
+}
+.nav-item a{
+  text-decoration: none;
+  color: rgba(97, 90, 90, 0.822);
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 16px;
+}
+.nav-item a:hover{
+  color: #ff8800;
+}
+
+.item1{
+  background:linear-gradient(rgba(48,79,71,.65) 100%,rgba(48,79,71,.65) 0),url(/src/images/banner/banner1.png) fixed center no-repeat;
+  background-size: cover;}
+.item2{
+  background:linear-gradient(rgba(48,79,71,.65) 100%,rgba(48,79,71,.65) 0),url(/src/images/banner/banner2.png) fixed center no-repeat;
+  background-size: cover;}
+.item3{
+  background:linear-gradient(rgba(48,79,71,.65) 100%,rgba(48,79,71,.65) 0),url(/src/images/banner/banner3.png) fixed center no-repeat;
+  background-size: cover;
+}
+.banner-title{
+  max-width: 617px;
+  margin: 0px auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 90px;
+    color: #fff;
+}
+.banner-des{
+  font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    color: #ff7f47;
+    margin: 30px 0px 50px 0px;
+}
+.package-section{
+  margin: 50px 0px;
+}
+.package-section .top{
+  margin-bottom: 15px;
+    font-size: 20px;
+    color: #ff7f47;
+    line-height: 1;
+    text-align: center;
+}
+.package-section .title{
+  font-family: "Quicksand",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    text-transform: capitalize;
+    color: #262339;
+    text-align: center;
+}
+.flex-section{
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.center{
+  text-align: center;
+  margin-top: 50px;
+}
+.gap-bottom{
+  margin-bottom: 25px;
+}
+.submit-btn-div{
+  width: 50%;
+}
+.submit-btn{
+  background-color: black;
   color: white;
+  font-weight: 700;
 }
-
-.App-link {
-  color: #61dafb;
+.flex-section input{
+  width: 40%;
+  margin: 10px 0px;
+  padding: 7px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-section textarea{
+  width: 40%;
+  margin: 10px 0px;
+  padding: 7px;
+}
+.error{
+  color: red;
+}
+.orange{
+  color: #ff7f47;;
+}
+.book-btn{
+  width: 100px;
+  background-color: #ff7f47;
+  border: none;
+  padding: 7px 0px;
+}
+.book-btn a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0px 15px;
+  
+}
+.review-card{
+  padding: 30px 25px;
+  margin: 20px 10px;
+  text-align: center;
+  box-shadow: 0 0 16px rgb(17 17 26 / 10%);
+  border-radius: 50px 50px 0 0;
+}
+.reviewer-img img {
+  height: 114px;
+  width: 114px;
+  border-radius: 50%;
+  border: 8px solid rgba(48,79,71,.1);
+  margin: 0 auto 20px;
+}
+.custom-btn{
+  background-color: #ff7f47;
+  color: white;
+  border: none;
+  font-weight: 700;
+  padding: 2px 10px;
+}
+.center-align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.delete{
+  color: white;
+  background-color: red;
+  font-weight: 700;
+  padding: 7px;
+  width: 45px;
+  cursor: pointer;
+  border: none;
+}
+.pending{
+  color: white;
+  background-color: red;
+  font-weight: 700;
+  padding: 5px 10px;
+  width: 95px;
+  border: none;
+  cursor: pointer;
+}
+.done{
+  color: white;
+  background-color: green;
+  font-weight: 700;
+  padding: 5px 7px;
+  width: 95px;
+  cursor: pointer;
+  border: none;
+}
+.height{
+  height: 70vh;
+  justify-content: center;
+}
+.height button{
+  background-color: rgb(255, 83, 71);
+  padding: 15px 25px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+.newsletter-area .newsletter-wrapper{
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 48px;
+  background: #304f47;
+  box-shadow: 0 32px 64px rgb(17 17 17 / 8%);
+  border-radius: 20px 20px 0 0;
+}
+.pt-120 {
+  padding-top: 70px;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.newsletter-area .newsletter-wrapper h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 54px;
+  text-transform: capitalize;
+  color: #fff;
+  max-width: 612px;
+  margin: 0 auto 45px;
+}
+.newsletter-area .newsletter-wrapper .newsletter-input button {
+  width: 172px;
+  background: #ff7f47;
+  border: 1px solid #ff7f47;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px rgb(26 34 56 / 18%);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.col-border{
+  border: 3px solid tomato;
+  padding: 50px 30px;
+  background-color: #304f47;
+  color: white;
+  border-radius: 15px;
+}
+.footer{
+padding-top: 70px;
+background: #262339;
+color: white;
+}
+.overflow-set{
+  overflow-x: auto;
 }
