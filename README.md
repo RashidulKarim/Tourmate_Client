@@ -1,4 +1,4 @@
-# TourNate || Your ultimate Tour Partner Client site (https://tourmate-acd90.web.app/)
+# TourMate || Your ultimate Tour Partner Client site (https://tourmate-acd90.web.app/)
 ### Server site: https://salty-waters-70938.herokuapp.com
 
 This app is create for an touring agency. They Offer varieties of Tour Package. Those package will display into home page. 
