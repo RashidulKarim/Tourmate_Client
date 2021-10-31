@@ -11,7 +11,7 @@ const MyOrders = () => {
     
     useEffect(()=>{
         if(user){
-        fetch(`http://localhost:5000/orders/${userEmail}`)
+        fetch(`https://salty-waters-70938.herokuapp.com/orders/${userEmail}`)
         .then(res => res.json())
         .then(data => {
             setOrders(data)
@@ -59,7 +59,7 @@ const MyOrders = () => {
             accessor: 'col5' 
           },
           {
-            Header: 'Delete Order',
+            Header: 'Cancel Order',
             accessor: 'col6' 
           },
         ],
@@ -69,7 +69,7 @@ const MyOrders = () => {
       const handleDelete = (id) => {
         const confirmation = window.confirm("Are you want to delete")
         if(confirmation){
-            fetch(`http://localhost:5000/delete/${id}`,{
+            fetch(`https://salty-waters-70938.herokuapp.com/delete/${id}`,{
             method:"DELETE"
         })
         .then(res => res.json())
@@ -88,9 +88,8 @@ const MyOrders = () => {
     return (
         <div className='overflow-set'>
             <h2 className='mt-5 mb-2 text-center'>My Orders</h2>
-           
            {
-               orders.length === 0 ? <h4 className='text-danger mt-3'>You dont have any order.</h4>: <div className='d-flex justify-content-md-center justify-content-start'><Table data ={data} columns={columns}></Table></div>
+               orders.length === 0 ? <h4 className='text-danger mt-3 text-center'>You dont have any order.</h4>: <div className='d-flex justify-content-md-center justify-content-start'><Table data ={data} columns={columns}></Table></div>
            }
         </div>
     );

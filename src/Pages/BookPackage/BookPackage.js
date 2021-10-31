@@ -9,7 +9,7 @@ const BookPackage = () => {
     const [tourPackage, setTourPackage] = useState({});
     const {id} = useParams()
     useEffect(()=>{
-        fetch(`http://localhost:5000/package/${id}`)
+        fetch(`https://salty-waters-70938.herokuapp.com/package/${id}`)
         .then(res => res.json())
         .then(data => setTourPackage(data)
         )
@@ -21,7 +21,7 @@ const BookPackage = () => {
     },[tourPackage])
 const onSubmit = data =>{
     const orderInfo = {...data, status:"pending"}
-        axios.post(`http://localhost:5000/confirmOrder`,{
+        axios.post(`https://salty-waters-70938.herokuapp.com/confirmOrder`,{
             body: orderInfo
         })
         .then(res => {

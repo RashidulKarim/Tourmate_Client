@@ -28,7 +28,7 @@ const Footer = () => {
                                         <span><FontAwesomeIcon icon={faPhoneAlt} /></span>
                                     </div>
                                    <div>
-                                   <span>01915555256</span>
+                                   <span>01915555256, </span>
                                     <span>01303020662</span>
                                    </div>
                                 </div>

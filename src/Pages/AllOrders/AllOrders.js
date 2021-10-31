@@ -6,7 +6,7 @@ const AllOrders = () => {
     const [orders , setOrders] = useState([])
 
     useEffect(()=>{
-        fetch("http://localhost:5000/allOrder")
+        fetch("https://salty-waters-70938.herokuapp.com/allOrder")
         .then(res => res.json())
         .then(data => setOrders(data)
         )
@@ -15,7 +15,7 @@ const AllOrders = () => {
     const handleDelete = (id) => {
         const confirmation = window.confirm("Are you want to delete")
         if(confirmation){
-            fetch(`http://localhost:5000/delete/${id}`,{
+            fetch(`https://salty-waters-70938.herokuapp.com/delete/${id}`,{
             method:"DELETE"
         })
         .then(res => res.json())
@@ -30,7 +30,7 @@ const AllOrders = () => {
         } 
     } 
     const updateStatus = (id) =>{
-         fetch(`http://localhost:5000/order/${id}`,{
+         fetch(`https://salty-waters-70938.herokuapp.com/order/${id}`,{
            method: "PUT"
          })
          .then(res => res.json())
@@ -96,12 +96,12 @@ const AllOrders = () => {
         []
       )
     return (
-        <div className='overflow-set text-center'>
-            <h2 className='mt-5 mb-2'>All Orders</h2>
-            <div className='d-flex justify-content-md-center justify-content-start'>
-            <Table data ={data} columns={columns}></Table>
-            </div>
-        </div>
+        <div className='overflow-set'>
+        <h2 className='mt-5 mb-2 text-center'>All Orders</h2>
+       {
+           orders.length === 0 ? <h4 className='text-danger mt-3 text-center'>No order found.</h4>: <div className='d-flex justify-content-md-center justify-content-start'><Table data ={data} columns={columns}></Table></div>
+       }
+    </div>
     );
 };
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import Package from '../Package/Package';
 
 const Packages = () => {
     const [packages, setPackages] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/packages')
+        fetch('https://salty-waters-70938.herokuapp.com/packages')
         .then(res => res.json())
         .then(data => setPackages(data)
         )
@@ -16,7 +16,14 @@ const Packages = () => {
             <h2 className='title mb-5'>Select Your Best Package <br /> For Your Travel</h2>
             <Row xs={1} md={2} lg={3} className="g-4">
             {
-                packages.map(pg => <Package package={pg} key={pg._id}></Package>)
+                packages.length ? packages.map(pg => <Package package={pg} key={pg._id}></Package>) : <span className='mx-auto'>
+                <Spinner animation="border" variant="primary" />
+                <Spinner animation="border" variant="secondary" />
+                <Spinner animation="border" variant="success" />
+                <Spinner animation="border" variant="danger" />
+                <Spinner animation="border" variant="warning" />
+                <Spinner animation="border" variant="info" />
+                    </span>
             }
             </Row>
  

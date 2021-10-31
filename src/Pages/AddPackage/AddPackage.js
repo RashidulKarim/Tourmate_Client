@@ -9,7 +9,7 @@ const AddPackage = () => {
     const onSubmit = data => {
         if(imgUrl){
             const packageInfo = {...data, imgUrl}            
-            axios.post("http://localhost:5000/addPackage",{
+            axios.post("https://salty-waters-70938.herokuapp.com/addPackage",{
         body: packageInfo
          })
     .then(res => {

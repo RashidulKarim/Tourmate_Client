@@ -14,7 +14,7 @@ const Package = (props) => {
                         <Card.Img variant="top" src={imgUrl} />
                         <Card.Body>
                         <div className='d-flex justify-content-between'>
-                            <h6>${price}/Per Person</h6>
+                            <h6>${price}/ Per Person</h6>
                             <h6><span className='p-1 text-primary'><FontAwesomeIcon icon={faCalendarAlt} /></span>{duration}</h6>
                         </div>
                         <div>
