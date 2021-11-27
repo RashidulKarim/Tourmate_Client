@@ -5,7 +5,7 @@ firebaseInit();
 
 const useFirebase = () => {
     const [user, setUser] = useState({})
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
